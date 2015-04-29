@@ -1,5 +1,5 @@
 === Ultimate Addons for SiteOrigin ===
-Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box
+Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box,
 Requires at least: 3.9
 Tested up to: 4.2
 Stable tag: 1.0
