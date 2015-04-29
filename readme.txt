@@ -12,6 +12,9 @@ An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is re
 
 == Description ==
 
+[vimeo https://vimeo.com/126388587]
+(Sorry for bad voice, will try to upload a better video soon. And also more tutorial videos.)
+
 This is an Addon plugin for SiteOrigin Widgets Bundle plugin which will add some (and growing) amazing widgets for you to build up your content pages easily using SiteOrigin page builder.
 
 The collection is growing, but here’s what we have so far.
