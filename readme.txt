@@ -1,5 +1,5 @@
 === Ultimate Addons for SiteOrigin ===
-Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box
+Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box,
 Requires at least: 3.9
 Tested up to: 4.2
 Stable tag: 1.0
@@ -11,6 +11,9 @@ Contributors: munirkamal
 An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is required.
 
 == Description ==
+
+[vimeo https://vimeo.com/126388587]
+(Sorry for bad voice, will try to upload a better video soon. And also more tutorial videos.)
 
 This is an Addon plugin for SiteOrigin Widgets Bundle plugin which will add some (and growing) amazing widgets for you to build up your content pages easily using SiteOrigin page builder.
 
