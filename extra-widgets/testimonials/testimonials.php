@@ -44,17 +44,7 @@ class Testimonials extends SiteOrigin_Widget {
                     )
                 ),
 
-                'rotaor_selection' => array(
-                    'type' => 'radio',
-                    'label' => __( 'Choose a Rotator Layout', 'addon-so-widgets-bundle' ),
-                    'default' => '',
-                    'options' => array(
-                        '2' => __( 'Two Columns', 'addon-so-widgets-bundle' ),
-                        '3' => __( 'Three Columns', 'addon-so-widgets-bundle' ),
-                        '4' => __( 'Four Columns', 'addon-so-widgets-bundle' ),
-                        '1' => __( 'Full Width', 'addon-so-widgets-bundle' ),
-                    )
-                ),
+
 
                 'grid_selection' => array(
                     'type' => 'radio',
@@ -116,8 +106,6 @@ $(document).ready(function() {
 
 }
 
-
-
 function my_custom_post_product() {
     $labels = array(
         'name'               => _x( 'Testimonial', 'post type general name' ),
@@ -148,6 +136,7 @@ add_action( 'init', 'my_custom_post_product' );
 
 
 
+require_once( '/tpl/testimonial-options.php' );
 
 
 
