@@ -2,8 +2,8 @@
 
 /*
 Plugin Name: Ultimate Addons for SiteOrigin
-Description: An ultimate collection of addons for SiteOrigin Widgets Bundle.
-Version: 0.1
+Description: An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is required.
+Version: 1.2.1
 Author: Ingenious Solution
 Author URI: http://ingenious-web.com/
 License: GPL3
