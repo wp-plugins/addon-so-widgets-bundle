@@ -26,10 +26,20 @@ class Service_Box extends SiteOrigin_Widget {
 					'label' => __('Service world! goes here.', 'addon-so-widgets-bundle'),
 					'default' => ''
 				),
+                'selection' => array(
+                    'type' => 'radio',
+                    'label' => __( 'Choose any One Icon Or Image', 'addon-so-widgets-bundle' ),
+                    'default' => 'icon',
+                    'options' => array(
+                        'icon' => __( 'Display a Icon', 'addon-so-widgets-bundle' ),
+                        'icon_image' => __( 'Display a Image', 'addon-so-widgets-bundle' ),
+                    )
+                ),
+
 
                 'icon_selection' => array(
                     'type' => 'radio',
-                    'label' => __( 'Choose a Icon Style', 'addon-so-widgets-bundle' ),
+                    'label' => __( 'Choose an Icon Style', 'addon-so-widgets-bundle' ),
                     'default' => 'top',
                     'options' => array(
                         'top' => __( 'Icon Top', 'addon-so-widgets-bundle' ),
@@ -40,7 +50,7 @@ class Service_Box extends SiteOrigin_Widget {
 
                 'icon_size' => array(
                     'type' => 'slider',
-                    'label' => __( 'Choose a icon size', 'addon-so-widgets-bundle' ),
+                    'label' => __( 'Set icon size', 'addon-so-widgets-bundle' ),
                     'default' => 3,
                     'min' => 2,
                     'max' => 100,
@@ -55,7 +65,7 @@ class Service_Box extends SiteOrigin_Widget {
 
                 'icon_img_width' => array(
                     'type' => 'slider',
-                    'label' => __( 'Choose a Image size', 'addon-so-widgets-bundle' ),
+                    'label' => __( 'Set Image Width', 'addon-so-widgets-bundle' ),
                     'default' => 3,
                     'min' => 2,
                     'max' => 100,
@@ -64,33 +74,25 @@ class Service_Box extends SiteOrigin_Widget {
 
                 'icon_image' => array(
                     'type' => 'media',
-                    'label' => __( 'Choose a Icon Image', 'addon-so-widgets-bundle' ),
+                    'label' => __( 'Choose Image', 'addon-so-widgets-bundle' ),
                     'choose' => __( 'Choose image', 'addon-so-widgets-bundle' ),
                     'update' => __( 'Set image', 'addon-so-widgets-bundle' ),
                     'library' => 'image'
                 ),
 
 
-                'selection' => array(
-                    'type' => 'radio',
-                    'label' => __( 'Choose any One Icon Or Icon Image', 'addon-so-widgets-bundle' ),
-                    'default' => 'icon',
-                    'options' => array(
-                        'icon' => __( 'Display a Icon', 'addon-so-widgets-bundle' ),
-                        'icon_image' => __( 'Display a Icon Image', 'addon-so-widgets-bundle' ),
-                    )
-                ),
+
 
 
                 'title' => array(
                     'type' => 'text',
-                    'label' => __('Service world! goes here.', 'addon-so-widgets-bundle'),
+                    'label' => __('Title', 'addon-so-widgets-bundle'),
                     'default' => ''
                 ),
 
                 'content' => array(
                     'type' => 'textarea',
-                    'label' => __( 'Type a message', 'addon-so-widgets-bundle' ),
+                    'label' => __( 'Content', 'addon-so-widgets-bundle' ),
                     'default' => '',
                     'allow_html_formatting' => true,
                     'rows' => 10
@@ -124,5 +126,8 @@ class Service_Box extends SiteOrigin_Widget {
 	}
 
 }
+
+
+require_once( '/tpl/service-options.php' );
 
 siteorigin_widget_register('service-box', __FILE__, 'Service_Box');

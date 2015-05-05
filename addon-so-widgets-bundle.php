@@ -17,27 +17,20 @@ function addon_so_widgets_bundle($folders){
 add_filter('siteorigin_widgets_widget_folders', 'addon_so_widgets_bundle');
 
 
-
-
 add_action('wp_enqueue_scripts','scripts');
 function scripts()
 {    
-    wp_enqueue_script( 'js-tas', plugin_dir_url(__FILE__) .'js/jquery-2.1.1.js');
+    wp_enqueue_script( 'js-tas', plugin_dir_url(__FILE__) .'js/jquery.js');
     wp_enqueue_style( 'bootstrap-css', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css');
     wp_enqueue_style( 'owl-css', plugin_dir_url(__FILE__) . 'css/owl.carousel.css');
     wp_enqueue_style( 'widgets-css', plugin_dir_url(__FILE__) . 'css/widgets.css');
     wp_enqueue_script( 'bootstrap-js', plugin_dir_url(__FILE__) .'js/bootstrap.min.js');
     wp_enqueue_script( 'owl-js', plugin_dir_url(__FILE__) .'js/owl.carousel.min.js');
-    wp_enqueue_script( 'custom-js', plugin_dir_url(__FILE__) .'js/custom.js');
 
 }
 
 
-
-
-
 //footer
-
 add_action('wp_footer','f_scripts');
 
 function f_scripts()
@@ -122,7 +115,7 @@ $(document).ready(function() {
 //accordion
 
 (function($) {
-    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+//    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 
     $('.accordion a').click(function(j) {
         var dropDown = $(this).closest('li').find('p');
@@ -147,7 +140,6 @@ $(document).ready(function() {
 }
 
 
-
 //pannel Group
 
 function addonso($tabs) {
@@ -163,20 +155,10 @@ function addonso($tabs) {
 add_filter('siteorigin_panels_widget_dialog_tabs', 'addonso', 20);
 
 
-
-
-
-
-
-
-
 /**
  * Load Titan Framework plugin checker
  */
+
 require_once( 'titan-framework-checker.php' );
 
-
-/**
- * Load Titan Framework options
- */
-require_once( 'titan-options.php' );
+require_once('widgets-options.php');

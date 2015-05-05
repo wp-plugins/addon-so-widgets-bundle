@@ -88,6 +88,6 @@ add_action( 'init', 'faq' );
 
 
 
-
+require_once( '/tpl/faqs-options.php' );
 
 siteorigin_widget_register('faqs', __FILE__, 'Faqs');

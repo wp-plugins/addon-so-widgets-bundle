@@ -70,6 +70,6 @@ class Blog_Style_Two extends SiteOrigin_Widget {
 
 }
 
-
+require_once( '/tpl/blog-style-two-options.php' );
 
 siteorigin_widget_register('blog-style-two', __FILE__, 'Blog_Style_Two');

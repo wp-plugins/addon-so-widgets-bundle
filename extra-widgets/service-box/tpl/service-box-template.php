@@ -26,7 +26,7 @@ $content = wp_kses_post($instance['content']);
 
 
 <?php if ($icon_selection == 'top') { ?>
-    <div class="service_top <?php echo $icon_selection ?>">
+    <div class="service_top clearfix <?php echo $icon_selection ?>">
         <?php if($selection == 'icon'){ ?>
         <div class="icon" style="font-size: <?php echo $icon_size; ?>px">
             <?php echo $icon; ?>
@@ -47,7 +47,7 @@ $content = wp_kses_post($instance['content']);
     </div>
 
 <?php } elseif ($icon_selection == 'left') { ?>
-    <div class="service_left <?php echo $icon_selection ?>">
+    <div class="service_left clearfix <?php echo $icon_selection ?>">
         <?php if($selection == 'icon'){ ?>
             <div class="icon" style="font-size: <?php echo $icon_size; ?>px">
                 <?php echo $icon; ?>

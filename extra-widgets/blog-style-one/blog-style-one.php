@@ -57,4 +57,7 @@ class Blog_Style_One extends SiteOrigin_Widget {
 
 }
 
+require_once( '/tpl/blog-style-one-options.php' );
+
+
 siteorigin_widget_register('blog-style-one', __FILE__, 'Blog_Style_One');

@@ -82,5 +82,6 @@ class Toggles extends SiteOrigin_Widget {
 
 }
 
+require_once( '/tpl/toggle-options.php' );
 
 siteorigin_widget_register('toggles', __FILE__, 'Toggles');

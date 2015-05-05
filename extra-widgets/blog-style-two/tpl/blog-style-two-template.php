@@ -15,8 +15,6 @@ $custom_class = wp_kses_post($instance['custom_class']);
 <div class="all_main">
     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-
-
         <div class="auto_height <?php echo $layout ?>  <?php echo $custom_class ?>">
             <div class="blog_two_style clearfix">
                 <div class="main">
@@ -28,7 +26,9 @@ $custom_class = wp_kses_post($instance['custom_class']);
 
                     <div class="content clearfix">
                         <h4><?php the_title(); ?></h4>
+                        <div class="meta">
                         by <?php the_author(); ?> | <?php echo get_the_date(); ?> | <?php the_category(', '); ?>
+                        </div>
                         <div class="border"></div>
                         <?php the_excerpt(); ?>
                         <div class="clearfix"></div>
@@ -39,7 +39,6 @@ $custom_class = wp_kses_post($instance['custom_class']);
                 </div>
             </div>
         </div>
-
 
 
     <?php endwhile; ?>

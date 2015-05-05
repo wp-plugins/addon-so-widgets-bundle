@@ -9,7 +9,7 @@
  * Titan. If Titan is installed but not activated, it will display the appropriate notice as well.
  *
  * To use this script, just copy it into your theme/plugin directory and do a
- * require_once( 'titan-framework-checker.php' );
+ * require_once( 'titan-framework-framework-checker.php' );
  *
  * Changelog:
  * v1.7.4
@@ -28,9 +28,9 @@ if ( ! class_exists( 'TitanFrameworkChecker' ) ) {
 	class TitanFrameworkChecker {
 
 
-		const SEARCH_REGEX = '/titan-framework.php/i';
+		const SEARCH_REGEX = '/titan-framework-framework.php/i';
 		const TITAN_CLASS = 'TitanFramework';
-		const PLUGIN_SLUG = 'titan-framework';
+		const PLUGIN_SLUG = 'titan-framework-framework';
 		
 		
 		/**
@@ -83,7 +83,7 @@ if ( ! class_exists( 'TitanFrameworkChecker' ) ) {
 			echo "<div class='error'><p><strong>"
 				. __( "Titan Framework needs to be installed.", "default" )
 				. sprintf( " <a href='%s'>%s</a>",
-					admin_url( "plugin-install.php?tab=search&type=term&s=titan+framework" ),
+					admin_url( "plugin-install.php?tab=search&type=term&s=titan-framework+framework" ),
 					__( "Click here to search for the plugin.", "default" ) )
 				. "</strong></p></div>";
 		}

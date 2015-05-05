@@ -1,8 +1,8 @@
 === Ultimate Addons for SiteOrigin ===
-Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box
+Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box,
 Requires at least: 3.9
 Tested up to: 4.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://ingenious-web.com/contact
@@ -11,6 +11,9 @@ Contributors: munirkamal
 An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is required.
 
 == Description ==
+
+[vimeo https://vimeo.com/126388587]
+(Sorry for bad voice, will try to upload a better video soon. And also more tutorial videos.)
 
 This is an Addon plugin for SiteOrigin Widgets Bundle plugin which will add some (and growing) amazing widgets for you to build up your content pages easily using SiteOrigin page builder.
 
@@ -24,6 +27,14 @@ The collection is growing, but here’s what we have so far.
 * Blog Posts Widget- There are currently 2 blog style widgets which you can use to display post loops to any page.
 * Divider Widget - This will help you to add different styles of divider b/w content sections.
 * Spacer Widget - Of-course some times you need a space b/w content sections, so here it is.
+
+Once you enable a widget, you'll be able to use it anywhere standard widgets are used. You can manage your widgets by going to Plugins > SiteOrigin Widgets in your WordPress admin.
+
+= Addon Widgets Customizations = 
+
+We have integrated customizations for each widget via the WordPress default customizer. Once you activate a widget from (Plugins > SiteOrigin Widgets) You will notice a new panel for that specific widget in (Appearance > Customize) and from there you may easily customize styling of the widgets added by this plugin.
+
+**Special thanks to SiteOrigin & Titan framework for the help in developing this plugin.**
 
 == Installation ==
 
@@ -39,9 +50,14 @@ We will add FAQs very soon.
 
 == Changelog ==
 
+= 1.1 =
+* Integrated Widgets Customizations via The Customizer
+* Fixed some bugs & issues & cleaned up some files
+* Small UI Improvements
+
 = 1.0 =
 * Initial Upload of the plugin
 
 == Upgrade Notice ==
 
-Updating is a smooth transition, but it's always better to have a backup.
+Updating is a smooth transition, but it's always better to have a backup first.
