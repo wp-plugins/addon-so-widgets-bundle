@@ -43,4 +43,35 @@ function demo_ather_create_options() {
         'desc' => __( '', 'demo_ather' ),
     ) );
 
+
+// Customizer options
+
+    $uso_testimonials = $titan->createThemeCustomizerSection( array(
+        'name' => 'Color Options',
+        'panel' => 'Testimonial',
+    ) );
+
+    $uso_testimonials->createOption( array(
+        'name' => 'Background Color',
+        'id' => 'background_color',
+        'type' => 'color',
+        'desc' => 'Pick a color',
+        'default' => '#EEE',
+        'css' => '.testimonial_content { background-color: value !important; }'
+    ) );
+
+
+    $uso_testimonials->createOption( array(
+        'name' => 'Text Color',
+        'id' => 'text_color',
+        'type' => 'color',
+        'desc' => 'Pick a color',
+        'default' => '#888',
+        'css' => '.testimonial_content p { color: value !important; }'
+    ) );
+
+
+
+
+
 }

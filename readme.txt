@@ -2,7 +2,7 @@
 Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box,
 Requires at least: 3.9
 Tested up to: 4.2
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://ingenious-web.com/contact
@@ -49,6 +49,9 @@ We have integrated customizations for each widget via the WordPress default cust
 We will add FAQs very soon.
 
 == Changelog ==
+
+= 1.2 =
+* very small fix
 
 = 1.1 =
 * Integrated Widgets Customizations via The Customizer
