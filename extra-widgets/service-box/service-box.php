@@ -128,6 +128,6 @@ class Service_Box extends SiteOrigin_Widget {
 }
 
 
-require_once( '/tpl/service-options.php' );
+require_once( 'tpl/service-options.php' );
 
 siteorigin_widget_register('service-box', __FILE__, 'Service_Box');

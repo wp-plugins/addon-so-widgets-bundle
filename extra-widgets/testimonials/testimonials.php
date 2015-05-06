@@ -136,7 +136,7 @@ add_action( 'init', 'my_custom_post_product' );
 
 
 
-require_once( '/tpl/testimonial-options.php' );
+require_once( 'tpl/testimonial-options.php' );
 
 
 

@@ -88,7 +88,7 @@ class Tabs extends SiteOrigin_Widget {
 	}
 
 }
-require_once( '/tpl/tabs-options.php' );
+require_once( 'tpl/tabs-options.php' );
 
 
 
