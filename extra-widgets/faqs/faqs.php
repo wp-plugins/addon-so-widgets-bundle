@@ -32,12 +32,34 @@ class Faqs extends SiteOrigin_Widget
                     'label' => __('Select FAQs', 'addon-so-widgets-bundle'),
                 ),
 
-                'custom_class' => array(
-                    'type' => 'text',
-                    'label' => __('Custom Class', 'addon-so-widgets-bundle'),
-                    'default' => ''
-                ),
+                'faqs_styling' => array(
+                    'type' => 'section',
+                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'hide' => true,
+                    'fields' => array(
 
+                        'title_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Title color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'title_hover_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Title Hover color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'content_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Content color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+
+
+                    )
+                ),
 
 
             ),
@@ -53,6 +75,14 @@ class Faqs extends SiteOrigin_Widget
     function get_style_name($instance)
     {
         return 'faqs-style';
+    }
+
+    function get_less_variables( $instance ) {
+        return array(
+            'title_color' => $instance['faqs_styling']['title_color'],
+            'title_hover_color' => $instance['faqs_styling']['title_hover_color'],
+            'content_color' => $instance['faqs_styling']['content_color'],
+        );
     }
 
 }
@@ -88,6 +118,5 @@ add_action( 'init', 'faq' );
 
 
 
-require_once( 'tpl/faqs-options.php' );
 
 siteorigin_widget_register('faqs', __FILE__, 'Faqs');

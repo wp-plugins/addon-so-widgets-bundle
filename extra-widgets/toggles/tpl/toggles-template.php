@@ -1,6 +1,5 @@
 <?php
 $widget_title =  wp_kses_post($instance['widget_title']);
-$custom_class =  wp_kses_post($instance['custom_class']);
 ?>
 
 
@@ -11,7 +10,7 @@ $custom_class =  wp_kses_post($instance['custom_class']);
 <?php } ?>
 
 
-<ul class="accordion <?php echo $custom_class; ?>">
+<ul class="accordion">
     <?php foreach( $instance['toggle_repeater'] as $i => $toggle_repeater ) : ?>
     <li>
         <a><?php echo $toggle_repeater['toggle_title'] ?></a>

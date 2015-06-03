@@ -1,7 +1,6 @@
 <?php
 $widget_title =  wp_kses_post($instance['widget_title']);
 $tabs_selection =  wp_kses_post($instance['tabs_selection']);
-$custom_class =  wp_kses_post($instance['custom_class']);
 ?>
 
 
@@ -14,7 +13,7 @@ $custom_class =  wp_kses_post($instance['custom_class']);
 
 <?php if($tabs_selection == 'horizontal'): ?>
 
-<div class="tab <?php echo $custom_class ?>">
+<div class="tab">
 
     <ul class="tabs">
         <?php foreach( $instance['repeater'] as $i => $repeater ) : ?>
@@ -35,7 +34,7 @@ $custom_class =  wp_kses_post($instance['custom_class']);
 <?php elseif($tabs_selection == 'vertical'): ?>
 
 
-    <div class="tab vertical  <?php echo $custom_class ?>">
+    <div class="tab vertical">
 
         <ul class="tabs ">
             <?php foreach( $instance['repeater'] as $i => $repeater ) : ?>

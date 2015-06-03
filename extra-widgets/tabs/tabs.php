@@ -66,12 +66,41 @@ class Tabs extends SiteOrigin_Widget {
                     )
                 ),
 
-                'custom_class' => array(
-                    'type' => 'text',
-                    'label' => __('Custom Class', 'addon-so-widgets-bundle'),
-                    'default' => ''
-                ),
 
+                'tabs_styling' => array(
+                    'type' => 'section',
+                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'hide' => true,
+                    'fields' => array(
+
+                        'bg_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'background color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'inactive_tab_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Inactive Tab color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'active_tab_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Active Tab color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'tab_content_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Tab Content color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+
+
+                    )
+                ),
 
 
 			),
@@ -87,10 +116,15 @@ class Tabs extends SiteOrigin_Widget {
 		return 'tabs-style';
 	}
 
+    function get_less_variables( $instance ) {
+        return array(
+            'bg_color' => $instance['tabs_styling']['bg_color'],
+            'inactive_tab_color' => $instance['tabs_styling']['inactive_tab_color'],
+            'active_tab_color' => $instance['tabs_styling']['active_tab_color'],
+            'tab_content_color' => $instance['tabs_styling']['tab_content_color'],
+        );
+    }
+
 }
-require_once( 'tpl/tabs-options.php' );
-
-
-
 
 siteorigin_widget_register('tabs', __FILE__, 'Tabs');

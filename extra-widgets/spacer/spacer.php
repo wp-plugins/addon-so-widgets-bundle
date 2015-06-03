@@ -33,14 +33,6 @@ class Spacer extends SiteOrigin_Widget
                     'default' => '10'
                 ),
 
-                'custom_class' => array(
-                    'type' => 'text',
-                    'label' => __('Custom Class', 'addon-so-widgets-bundle'),
-                    'default' => ''
-                ),
-
-
-
             ),
             plugin_dir_path(__FILE__)
         );

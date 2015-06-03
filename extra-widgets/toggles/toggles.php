@@ -58,13 +58,34 @@ class Toggles extends SiteOrigin_Widget {
                     )
                 ),
 
-                'custom_class' => array(
-                    'type' => 'text',
-                    'label' => __('Custom Class', 'addon-so-widgets-bundle'),
-                    'default' => ''
+                'toggle_styling' => array(
+                    'type' => 'section',
+                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'hide' => true,
+                    'fields' => array(
+
+                        'title_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Title color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'title_hover_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Title Hover color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'content_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Content color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+
+
+                    )
                 ),
-
-
 
 
 			),
@@ -80,8 +101,15 @@ class Toggles extends SiteOrigin_Widget {
 		return 'toggles-style';
 	}
 
+    function get_less_variables( $instance ) {
+        return array(
+            'title_color' => $instance['toggle_styling']['title_color'],
+            'title_hover_color' => $instance['toggle_styling']['title_hover_color'],
+            'content_color' => $instance['toggle_styling']['content_color'],
+        );
+    }
+
 }
 
-require_once( 'tpl/toggle-options.php' );
 
 siteorigin_widget_register('toggles', __FILE__, 'Toggles');

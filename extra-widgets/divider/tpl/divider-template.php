@@ -5,7 +5,6 @@ $divider_width = wp_kses_post($instance['border_width']);
 $divider_color = wp_kses_post($instance['divider_color']);
 $margin_top = wp_kses_post($instance['margin_top']);
 $margin_bottom = wp_kses_post($instance['margin_bottom']);
-$custom_class = wp_kses_post($instance['custom_class']);
 ?>
 
 
@@ -17,4 +16,4 @@ $custom_class = wp_kses_post($instance['custom_class']);
 <?php } ?>
 
 
-<hr class="<?php echo $custom_class; ?>" style="border-style:<?php echo $divider ?>; border-width:0 0 <?php echo $divider_width ?>px 0; border-color:<?php echo $divider_color; ?>; margin-top: <?php echo $margin_top ?>px; margin-bottom: <?php echo $margin_bottom ?>px;">
+<hr style="border-style:<?php echo $divider ?>; border-width:0 0 <?php echo $divider_width ?>px 0; border-color:<?php echo $divider_color; ?>; margin-top: <?php echo $margin_top ?>px; margin-bottom: <?php echo $margin_bottom ?>px;">

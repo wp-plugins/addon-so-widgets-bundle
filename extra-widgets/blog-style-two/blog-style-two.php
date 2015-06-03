@@ -46,11 +46,32 @@ class Blog_Style_Two extends SiteOrigin_Widget {
                     )
                 ),
 
+                'blog_two_styling' => array(
+                    'type' => 'section',
+                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'hide' => true,
+                    'fields' => array(
 
-                'custom_class' => array(
-                    'type' => 'text',
-                    'label' => __('Custom Class', 'addon-so-widgets-bundle'),
-                    'default' => ''
+                        'title_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Title color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'content_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Content color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'meta_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Meta color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+
+                    )
                 ),
 
             ),
@@ -68,8 +89,15 @@ class Blog_Style_Two extends SiteOrigin_Widget {
 		return 'blog-style-two-style';
 	}
 
+    function get_less_variables( $instance ) {
+        return array(
+            'title_color' => $instance['blog_two_styling']['title_color'],
+            'content_color' => $instance['blog_two_styling']['content_color'],
+            'meta_color' => $instance['blog_two_styling']['meta_color'],
+        );
+    }
+
 }
 
-require_once( 'tpl/blog-style-two-options.php' );
 
 siteorigin_widget_register('blog-style-two', __FILE__, 'Blog_Style_Two');

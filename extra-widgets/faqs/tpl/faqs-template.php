@@ -1,11 +1,9 @@
 <?php
 $widget_title = wp_kses_post($instance['widget_title']);
-$custom_class = wp_kses_post($instance['custom_class']);
 $query = siteorigin_widget_post_selector_process_query($instance['posts']);
 $the_query = new WP_Query($query);
 
 ?>
-
 
 
 <?php if ($widget_title) { ?>
@@ -15,7 +13,7 @@ $the_query = new WP_Query($query);
 <?php } ?>
 
 
-<ul class="accordion <?php echo $custom_class ?>">
+<ul class="accordion">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <li>
             <a> <?php the_title(); ?></a>

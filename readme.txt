@@ -1,8 +1,8 @@
 === Ultimate Addons for SiteOrigin ===
-Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box,
+Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box, post loop
 Requires at least: 3.9
 Tested up to: 4.2
-Stable tag: 1.2.2
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://ingenious-web.com/contact
@@ -12,8 +12,7 @@ An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is re
 
 == Description ==
 
-[vimeo https://vimeo.com/126388587]
-(Sorry for bad voice, will try to upload a better video soon. And also more tutorial videos.)
+(Updated Video intro is coming soon)
 
 This is an Addon plugin for SiteOrigin Widgets Bundle plugin which will add some (and growing) amazing widgets for you to build up your content pages easily using SiteOrigin page builder.
 
@@ -32,9 +31,9 @@ Once you enable a widget, you'll be able to use it anywhere standard widgets are
 
 = Addon Widgets Customizations = 
 
-We have integrated customizations for each widget via the WordPress default customizer. Once you activate a widget from (Plugins > SiteOrigin Widgets) You will notice a new panel for that specific widget in (Appearance > Customize) and from there you may easily customize styling of the widgets added by this plugin.
+Now each widget has it's stylying options within it same as Siteorigin Widgets.
 
-**Special thanks to SiteOrigin & Titan framework for the help in developing this plugin.**
+**Special thanks to SiteOrigin for the help in developing this plugin.**
 
 == Installation ==
 
@@ -49,6 +48,14 @@ We have integrated customizations for each widget via the WordPress default cust
 We will add FAQs very soon.
 
 == Changelog ==
+
+= 2.0 =
+* Re-coded all Widgets to utilize SiteoRigin's API more better.
+* Each Widget now has it's own options, same as SiteOrigin's Widget bundle widgets.
+* Each Widget now can be styled differently as each one has it's own styling options as well.
+* Removed Titan Framework Dependency.
+* Customized bootstrap css used to just use the bootstap Grid CSS, excluded all other css from Bootstrap css file.
+* Fixed some small bugs as well.
 
 = 1.2.2 =
 * Fatal Error require_once() issue fix from the last update.
@@ -69,4 +76,4 @@ We will add FAQs very soon.
 
 == Upgrade Notice ==
 
-Updating is a smooth transition, but it's always better to have a backup first.
+This is a major update of this plugin, all widgets are re-coded to use SiteOrigin's API properly and removed dependency of Titan framework. By updating it you will loss some old working widgets and will need to re-add them to make them work. However all widgets are same as previous. Other than that updating is a smooth transition, but it's always better to have a backup first.

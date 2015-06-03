@@ -63,13 +63,6 @@ class Divider extends SiteOrigin_Widget {
                     'default' => ''
                 ),
 
-                'custom_class' => array(
-                    'type' => 'text',
-                    'label' => __('Custom Class', 'addon-so-widgets-bundle'),
-                    'default' => ''
-                ),
-
-
 			),
 			plugin_dir_path(__FILE__)
 		);

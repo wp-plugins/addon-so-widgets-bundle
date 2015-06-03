@@ -4,9 +4,7 @@ $layout_selection =  wp_kses_post($instance['layout_selection']);
 $grid_selection =  wp_kses_post($instance['grid_selection']);
 $query = siteorigin_widget_post_selector_process_query($instance['posts']);
 $the_query = new WP_Query($query);
-$custom_class = wp_kses_post($instance['custom_class']);
-$titan = TitanFramework::getInstance( 'demo_ather' );
-
+global $post;
 
 ?>
 
@@ -28,14 +26,14 @@ $titan = TitanFramework::getInstance( 'demo_ather' );
 
 
 
-        <div class="testimonials_grid <?php echo $custom_class ?>">
+        <div class="testimonials_grid">
             <div class="testimonial_content big-col">
                 <p><?php echo the_content(); ?></p>
             </div>
             <h5>
                 <a href=" <?php
-                $testimonial_url = $titan->getOption( 'testimonial_url', get_the_ID() );
-                echo  $testimonial_url;
+                $user_url = get_post_meta( $post->ID, '_cmb_testimonial_url', true );
+                echo $user_url;
                 ?>">
                     <?php
                     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -43,8 +41,8 @@ $titan = TitanFramework::getInstance( 'demo_ather' );
                     }
                     ?>
                     <?php
-                    $testimonial_user = $titan->getOption( 'testimonial_user', get_the_ID() );
-                    echo  $testimonial_user;
+                    $username = get_post_meta( $post->ID, '_cmb_testimonial_usermane', true );
+                    echo $username;
                     ?>
                 </a>
             </h5>
@@ -57,14 +55,14 @@ $titan = TitanFramework::getInstance( 'demo_ather' );
     <?php  while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
         <div class="<?php echo $grid_selection; ?>">
-                <div class="testimonials_grid <?php echo $custom_class ?>">
+                <div class="testimonials_grid">
                     <div class="testimonial_content big-col">
                         <p><?php echo the_content(); ?></p>
                     </div>
                     <h5>
                         <a href=" <?php
-                        $testimonial_url = $titan->getOption( 'testimonial_url', get_the_ID() );
-                        echo  $testimonial_url;
+                        $user_url = get_post_meta( $post->ID, '_cmb_testimonial_url', true );
+                        echo $user_url;
                         ?>">
                             <?php
                             if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -72,8 +70,8 @@ $titan = TitanFramework::getInstance( 'demo_ather' );
                             }
                             ?>
                             <?php
-                            $testimonial_user = $titan->getOption( 'testimonial_user', get_the_ID() );
-                            echo  $testimonial_user;
+                            $username = get_post_meta( $post->ID, '_cmb_testimonial_usermane', true );
+                            echo $username;
                             ?>
                         </a>
                     </h5>

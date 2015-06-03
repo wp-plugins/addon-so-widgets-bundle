@@ -48,7 +48,7 @@ class Testimonials extends SiteOrigin_Widget {
 
                 'grid_selection' => array(
                     'type' => 'radio',
-                    'label' => __( 'Choose a Gird Layout', 'addon-so-widgets-bundle' ),
+                    'label' => __( 'Choose a Gird Layout ( Only for Testimonial Grid )', 'addon-so-widgets-bundle' ),
                     'default' => '',
                     'options' => array(
                         'col-md-6' => __( 'Two Columns', 'addon-so-widgets-bundle' ),
@@ -59,11 +59,6 @@ class Testimonials extends SiteOrigin_Widget {
                 ),
 
 
-                'custom_class' => array(
-                    'type' => 'text',
-                    'label' => __('Custom Class', 'addon-so-widgets-bundle'),
-                    'default' => ''
-                ),
 
 			),
 			plugin_dir_path(__FILE__)
@@ -136,7 +131,7 @@ add_action( 'init', 'my_custom_post_product' );
 
 
 
-require_once( 'tpl/testimonial-options.php' );
+//require_once( 'tpl/testimonial-options.php' );
 
 
 

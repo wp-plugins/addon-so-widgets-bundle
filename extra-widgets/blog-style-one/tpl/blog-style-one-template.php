@@ -2,7 +2,6 @@
 $query = siteorigin_widget_post_selector_process_query($instance['posts']);
 $the_query = new WP_Query($query);
 $widget_title = wp_kses_post($instance['widget_title']);
-$custom_class = wp_kses_post($instance['custom_class']);
 ?>
 
 <?php if ($widget_title) { ?>
@@ -14,7 +13,7 @@ $custom_class = wp_kses_post($instance['custom_class']);
 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
 
-    <div class="blog_one_style clearfix <?php echo $custom_class ?>">
+    <div class="blog_one_style clearfix">
 
          <div class="col-md-4 image alpha">
          <?php if(has_post_thumbnail()){

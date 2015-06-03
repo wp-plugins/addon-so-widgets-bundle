@@ -35,7 +35,7 @@ h1 {
   position: absolute;
   left: 10px;
   content: " ";
-  top: 17px;
+  top: 20px;
   transform: rotate(-45deg);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -50,6 +50,24 @@ a.active:after {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+
+
+@title_color: #000000;
+@title_hover_color: #000000 ;
+@content_color: #000000 ;
+
+.accordion li a{
+  color: @title_color;
+}
+
+.accordion li a:hover {
+  color: @title_hover_color;
+}
+
+.accordion li p{
+  color: @content_color;
 }
 
 

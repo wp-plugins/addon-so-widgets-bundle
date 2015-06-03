@@ -3,12 +3,15 @@
 /*
 Plugin Name: Ultimate Addons for SiteOrigin
 Description: An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is required.
-Version: 1.2.2
+Version: 2.0
 Author: Ingenious Solution
 Author URI: http://ingenious-web.com/
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 */
+
+require_once('cmb-functions.php');
+
 
 function addon_so_widgets_bundle($folders){
 	$folders[] = plugin_dir_path(__FILE__).'extra-widgets/';
@@ -24,7 +27,6 @@ function scripts()
     wp_enqueue_style( 'bootstrap-css', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css');
     wp_enqueue_style( 'owl-css', plugin_dir_url(__FILE__) . 'css/owl.carousel.css');
     wp_enqueue_style( 'widgets-css', plugin_dir_url(__FILE__) . 'css/widgets.css');
-    wp_enqueue_script( 'bootstrap-js', plugin_dir_url(__FILE__) .'js/bootstrap.min.js');
     wp_enqueue_script( 'owl-js', plugin_dir_url(__FILE__) .'js/owl.carousel.min.js');
 
 }
@@ -155,10 +157,4 @@ function addonso($tabs) {
 add_filter('siteorigin_panels_widget_dialog_tabs', 'addonso', 20);
 
 
-/**
- * Load Titan Framework plugin checker
- */
 
-require_once( 'titan-framework-checker.php' );
-
-require_once('widgets-options.php');

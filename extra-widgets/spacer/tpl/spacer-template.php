@@ -1,7 +1,6 @@
 <?php
 $widget_title = wp_kses_post($instance['widget_title']);
 $spacer = wp_kses_post($instance['spacer']);
-$custom_class = wp_kses_post($instance['custom_class']);
 
 ?>
 
@@ -14,5 +13,5 @@ $custom_class = wp_kses_post($instance['custom_class']);
 <?php } ?>
 
 
-<div class="spacer <?php echo $custom_class; ?>" style="height: <?php echo $spacer ?>px">
+<div class="spacer" style="height: <?php echo $spacer ?>px">
 </div>

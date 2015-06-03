@@ -34,11 +34,35 @@ class Blog_Style_One extends SiteOrigin_Widget {
                     'label' => __('Select Posts', 'addon-so-widgets-bundle'),
                 ),
 
-                'custom_class' => array(
-                    'type' => 'text',
-                    'label' => __('Custom Class', 'addon-so-widgets-bundle'),
-                    'default' => ''
+                'blog_one_styling' => array(
+                    'type' => 'section',
+                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'hide' => true,
+                    'fields' => array(
+
+                        'title_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Title color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'content_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Content color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'meta_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Meta color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+
+                    )
                 ),
+
+
 
             ),
 
@@ -55,9 +79,17 @@ class Blog_Style_One extends SiteOrigin_Widget {
 		return 'blog-style-one-style';
 	}
 
+    function get_less_variables( $instance ) {
+        return array(
+            'title_color' => $instance['blog_one_styling']['title_color'],
+            'content_color' => $instance['blog_one_styling']['content_color'],
+            'meta_color' => $instance['blog_one_styling']['meta_color'],
+        );
+    }
+
+
+
+
 }
-
-require_once( 'tpl/blog-style-one-options.php' );
-
 
 siteorigin_widget_register('blog-style-one', __FILE__, 'Blog_Style_One');
