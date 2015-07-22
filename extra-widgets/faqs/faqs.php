@@ -17,6 +17,7 @@ class Faqs extends SiteOrigin_Widget
             __('Faqs', 'addon-so-widgets-bundle'),
             array(
                 'description' => __('FAQs Component', 'addon-so-widgets-bundle'),
+                'panels_icon' => 'dashicons dashicons-exerpt-view',
                 'panels_groups' => array('addonso')
             ),
             array(),

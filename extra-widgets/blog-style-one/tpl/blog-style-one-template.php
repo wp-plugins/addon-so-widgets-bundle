@@ -15,25 +15,25 @@ $widget_title = wp_kses_post($instance['widget_title']);
 
     <div class="blog_one_style clearfix">
 
-         <div class="col-md-4 image alpha">
+         <div class="col-md-so-4 col-sm-so-4 image alpha">
          <?php if(has_post_thumbnail()){
              the_post_thumbnail();
          } ?>
          </div>
 
-        <div class="col-md-8 content">
+        <div class="col-md-so-8 col-sm-so-8 content">
         <h4><?php the_title(); ?></h4>
         <?php the_excerpt(); ?>
         </div>
 
         <div class="clearfix"></div>
 
-        <div class="col-md-12 meta clearfix">
-            <div class="pull-left">
+        <div class="meta clearfix">
+            <div class="left-style">
             by <?php the_author(); ?> | <?php echo get_the_date(); ?> | <?php the_category(', '); ?>
             </div>
-            <div class="pull-right">
-            <a href="<?php the_permalink(); ?>">Read More <span class="glyphicon glyphicon-menu-right"></span></a>
+            <div class="right-style">
+            <a href="<?php the_permalink(); ?>">Read More </a>
             </div>
         </div>
     </div>

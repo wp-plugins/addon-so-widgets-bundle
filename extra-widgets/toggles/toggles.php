@@ -15,6 +15,7 @@ class Toggles extends SiteOrigin_Widget {
 			__('Toggle', 'addon-so-widgets-bundle'),
 			array(
 				'description' => __('Toggle Component.', 'addon-so-widgets-bundle'),
+                'panels_icon' => 'dashicons dashicons-list-view',
                 'panels_groups' => array('addonso')
 			),
 			array(
@@ -47,11 +48,18 @@ class Toggles extends SiteOrigin_Widget {
 
 
                         'toggle_content' => array(
-                            'type' => 'textarea',
+                            'type' => 'tinymce',
                             'label' => __( 'Toggle Content', 'addon-so-widgets-bundle' ),
                             'default' => '',
-                            'allow_html_formatting' => true,
-                            'rows' => 10
+                            'rows' => 10,
+                            'default_editor' => 'html',
+                            'button_filters' => array(
+                                'mce_buttons' => array( $this, 'filter_mce_buttons' ),
+                                'mce_buttons_2' => array( $this, 'filter_mce_buttons_2' ),
+                                'mce_buttons_3' => array( $this, 'filter_mce_buttons_3' ),
+                                'mce_buttons_4' => array( $this, 'filter_mce_buttons_5' ),
+                                'quicktags_settings' => array( $this, 'filter_quicktags_settings' ),
+                            ),
                         ),
 
 

@@ -17,6 +17,7 @@ class Spacer extends SiteOrigin_Widget
             __('Spacer', 'spacer-text-domain'),
             array(
                 'description' => __('Spacer.', 'addon-so-widgets-bundle'),
+                'panels_icon' => 'dashicons dashicons-leftright',
                 'panels_groups' => array('addonso')
             ),
             array(),
@@ -28,10 +29,15 @@ class Spacer extends SiteOrigin_Widget
                 ),
 
                 'spacer' => array(
-                    'type' => 'number',
-                    'label' => __( 'Height Without px', 'addon-so-widgets-bundle' ),
-                    'default' => '10'
+                    'type' => 'slider',
+                    'label' => __( 'Set Height', 'addon-so-widgets-bundle' ),
+                    'default' => 3,
+                    'min' => 20,
+                    'max' => 500,
+                    'integer' => true
                 ),
+
+
 
             ),
             plugin_dir_path(__FILE__)

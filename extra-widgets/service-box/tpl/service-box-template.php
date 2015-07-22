@@ -11,6 +11,9 @@ $icon = siteorigin_widget_get_icon($instance['icon_section']['icon']);
 $icon_image = wp_get_attachment_image_src($instance['icon_image_section']['icon_image']);
 $title = wp_kses_post($instance['title']);
 $content = wp_kses_post($instance['content']);
+$shape = wp_kses_post($instance['styling']['shapes']);
+
+
 ?>
 
 
@@ -24,7 +27,7 @@ $content = wp_kses_post($instance['content']);
 <?php if ($icon_selection == 'top') { ?>
     <div class="service_top clearfix <?php echo $icon_selection ?>">
         <?php if($selection == 'icon'){ ?>
-            <div class="icon" style="font-size: <?php echo $icon_size; ?>px">
+            <div class="icon <?php echo $shape ?>" style="font-size: <?php echo $icon_size; ?>px">
                 <?php echo $icon; ?>
             </div>
         <?php } elseif($selection == 'icon_image'){ ?>
@@ -58,7 +61,7 @@ $content = wp_kses_post($instance['content']);
             <?php echo $content; ?>
             <div class="clearfix"></div>
             <?php if($btn_text): ?>
-                <a class="btn_style clearfix" href="<?php echo $btn_url; ?>" role="button"><?php echo $btn_text; ?> ></a>
+                <a class="alpha btn_style clearfix" href="<?php echo $btn_url; ?>" role="button"><?php echo $btn_text; ?> ></a>
             <?php endif; ?>
         </div>
     </div>

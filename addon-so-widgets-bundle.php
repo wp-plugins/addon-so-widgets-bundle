@@ -3,9 +3,10 @@
 /*
 Plugin Name: Ultimate Addons for SiteOrigin
 Description: An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is required.
-Version: 2.0
+Version: 2.1
 Author: Ingenious Solution
 Author URI: http://ingenious-web.com/
+Plugin URI: http://ingenious-web.com/ultimate-addons-for-siteorigin/
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 */
@@ -20,11 +21,10 @@ function addon_so_widgets_bundle($folders){
 add_filter('siteorigin_widgets_widget_folders', 'addon_so_widgets_bundle');
 
 
-add_action('wp_enqueue_scripts','scripts');
+
+add_action('wp_footer','scripts');
 function scripts()
-{    
-    wp_enqueue_script( 'js-tas', plugin_dir_url(__FILE__) .'js/jquery.js');
-    wp_enqueue_style( 'bootstrap-css', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css');
+{
     wp_enqueue_style( 'owl-css', plugin_dir_url(__FILE__) . 'css/owl.carousel.css');
     wp_enqueue_style( 'widgets-css', plugin_dir_url(__FILE__) . 'css/widgets.css');
     wp_enqueue_script( 'owl-js', plugin_dir_url(__FILE__) .'js/owl.carousel.min.js');
@@ -39,6 +39,7 @@ function f_scripts()
 { ?>
 
   <script>
+      jQuery(document).ready(function($){
 
 
       equalheight = function(container){
@@ -80,6 +81,9 @@ function f_scripts()
       $(window).resize(function(){
           equalheight('.all_main .auto_height');
       });
+
+
+      });
   </script>
 
    <?php
@@ -91,7 +95,8 @@ function f_scripts()
 
 
 //    tabs
-$(document).ready(function() {
+
+jQuery(document).ready(function($){
 
 	(function ($) {
 		$('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
@@ -108,15 +113,13 @@ $(document).ready(function() {
 
 			g.preventDefault();
 		} );
-	})(jQuery);
 
-});
+
 
 
 
 //accordion
 
-(function($) {
 //    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 
     $('.accordion a').click(function(j) {
@@ -136,6 +139,10 @@ $(document).ready(function() {
         j.preventDefault();
     });
 })(jQuery);
+
+
+
+});
 
 </script>";
 

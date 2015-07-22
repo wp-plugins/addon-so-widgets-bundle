@@ -15,6 +15,7 @@ class Blog_Style_Two extends SiteOrigin_Widget {
 			__('Blog Style two', 'addon-so-widgets-bundle'),
 			array(
 				'description' => __('Blog style two.', 'addon-so-widgets-bundle'),
+                'panels_icon' => 'dashicons dashicons-welcome-write-blog',
                 'panels_groups' => array('addonso')
 			),
 			array(
@@ -40,9 +41,9 @@ class Blog_Style_Two extends SiteOrigin_Widget {
                     'label' => __( 'Choose a Layout', 'addon-so-widgets-bundle' ),
                     'default' => 'col-md-6',
                     'options' => array(
-                        'col-md-6' => __( '2 Column Layout', 'widget-form-fields-text-domain' ),
-                        'col-md-4' => __( '3 Column Layout', 'widget-form-fields-text-domain' ),
-                        'col-md-3' => __( '4 Column Layout', 'widget-form-fields-text-domain' ),
+                        'col-md-so-6' => __( '2 Column Layout', 'widget-form-fields-text-domain' ),
+                        'col-md-so-4' => __( '3 Column Layout', 'widget-form-fields-text-domain' ),
+                        'col-md-so-3' => __( '4 Column Layout', 'widget-form-fields-text-domain' ),
                     )
                 ),
 

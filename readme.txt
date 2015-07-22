@@ -2,7 +2,7 @@
 Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box, post loop
 Requires at least: 3.9
 Tested up to: 4.2
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://ingenious-web.com/contact
@@ -12,9 +12,9 @@ An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is re
 
 == Description ==
 
-(Updated Video intro is coming soon)
+** Important: You must activate widgets you need to use from Plugins > SiteOrigin Widgets so that they can be available to use. **
 
-This is an Addon plugin for SiteOrigin Widgets Bundle plugin which will add some (and growing) amazing widgets for you to build up your content pages easily using SiteOrigin page builder.
+This is an Addon plugin for SiteOrigin Widgets Bundle plugin which will add some (and growing) amazing widgets for you to build up your content pages easily using SiteOrigin page builder. For more info visit [Ultimate Addons' Page.](http://ingenious-web.com/ultimate-addons-for-siteorigin/)
 
 The collection is growing, but here’s what we have so far.
 
@@ -31,7 +31,7 @@ Once you enable a widget, you'll be able to use it anywhere standard widgets are
 
 = Addon Widgets Customizations = 
 
-Now each widget has it's stylying options within it same as Siteorigin Widgets.
+Now each widget has it's styling options within it same as Siteorigin Widgets.
 
 **Special thanks to SiteOrigin for the help in developing this plugin.**
 
@@ -49,12 +49,19 @@ We will add FAQs very soon.
 
 == Changelog ==
 
+= 2.1 =
+* Removed Bootstrap dependency
+* Fixed JQuery conflict, now using WordPress bundled JQuery.
+* Added TinyMCE editor to some widgets such as Tabs, toggle
+* Fixed some other bugs.
+
+
 = 2.0 =
 * Re-coded all Widgets to utilize SiteoRigin's API more better.
 * Each Widget now has it's own options, same as SiteOrigin's Widget bundle widgets.
 * Each Widget now can be styled differently as each one has it's own styling options as well.
 * Removed Titan Framework Dependency.
-* Customized bootstrap css used to just use the bootstap Grid CSS, excluded all other css from Bootstrap css file.
+* Customized bootstrap css used to just use the bootstrap Grid CSS, excluded all other css from Bootstrap css file.
 * Fixed some small bugs as well.
 
 = 1.2.2 =

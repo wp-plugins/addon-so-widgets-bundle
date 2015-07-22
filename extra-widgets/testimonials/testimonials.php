@@ -15,6 +15,7 @@ class Testimonials extends SiteOrigin_Widget {
 			__('Testimonials', 'addon-so-widgets-bundle'),
 			array(
 				'description' => __('Testimonials.', 'addon-so-widgets-bundle'),
+                'panels_icon' => 'dashicons dashicons-testimonial',
                 'panels_groups' => array('addonso')
 			),
 			array(
@@ -51,10 +52,36 @@ class Testimonials extends SiteOrigin_Widget {
                     'label' => __( 'Choose a Gird Layout ( Only for Testimonial Grid )', 'addon-so-widgets-bundle' ),
                     'default' => '',
                     'options' => array(
-                        'col-md-6' => __( 'Two Columns', 'addon-so-widgets-bundle' ),
-                        'col-md-4' => __( 'Three Columns', 'addon-so-widgets-bundle' ),
-                        'col-md-3' => __( 'Four Columns', 'addon-so-widgets-bundle' ),
-                        'col-md-12' => __( 'Full Width', 'addon-so-widgets-bundle' ),
+                        'col-md-so-6' => __( 'Two Columns', 'addon-so-widgets-bundle' ),
+                        'col-md-so-4' => __( 'Three Columns', 'addon-so-widgets-bundle' ),
+                        'col-md-so-3' => __( 'Four Columns', 'addon-so-widgets-bundle' ),
+                        'col-md-so-12' => __( 'Full Width', 'addon-so-widgets-bundle' ),
+                    )
+                ),
+
+
+                'testimonial_styling' => array(
+                    'type' => 'section',
+                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'hide' => true,
+                    'fields' => array(
+
+                        'bg_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'background color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+                        'content_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Content color', 'widget-form-fields-text-domain' ),
+                            'default' => ''
+                        ),
+
+
+
+
+
                     )
                 ),
 
@@ -73,10 +100,17 @@ class Testimonials extends SiteOrigin_Widget {
 		return 'testimonials-style';
 	}
 
+    function get_less_variables( $instance ) {
+        return array(
+            'bg_color' => $instance['testimonial_styling']['bg_color'] . '!important',
+            'content_color' => $instance['testimonial_styling']['content_color'] . '!important',
+        );
+    }
+
 }
 
 
-add_action('wp_head','carousel_scripts');
+add_action('wp_footer','carousel_scripts');
 
 function carousel_scripts()
 {
@@ -85,7 +119,9 @@ function carousel_scripts()
 
 
 
-$(document).ready(function() {
+jQuery(document).ready(function($){
+
+(function ($) {
 
     $('.testimonial_carousel').owlCarousel({
         autoPlay: 3000, //Set AutoPlay to 3 seconds
@@ -93,7 +129,7 @@ $(document).ready(function() {
         items : 1
     });
 
-
+})(jQuery);
 
 });
 
@@ -129,9 +165,6 @@ function my_custom_post_product() {
 }
 add_action( 'init', 'my_custom_post_product' );
 
-
-
-//require_once( 'tpl/testimonial-options.php' );
 
 
 

@@ -15,6 +15,7 @@ class Blog_Style_One extends SiteOrigin_Widget {
 			__('Blog Style One', 'blog-style-one-text-domain'),
 			array(
 				'description' => __('Blog style One.', 'addon-so-widgets-bundle'),
+                'panels_icon' => 'dashicons dashicons-welcome-write-blog',
                 'panels_groups' => array('addonso')
 			),
 			array(

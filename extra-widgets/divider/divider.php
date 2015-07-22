@@ -15,6 +15,7 @@ class Divider extends SiteOrigin_Widget {
 			__('Divider', 'addon-so-widgets-bundle'),
 			array(
 				'description' => __('Divider .', 'addon-so-widgets-bundle'),
+                'panels_icon' => 'dashicons dashicons-minus',
                 'panels_groups' => array('addonso')
 			),
 			array(
@@ -39,10 +40,14 @@ class Divider extends SiteOrigin_Widget {
                     )
                 ),
 
+
                 'border_width' => array(
-                    'type' => 'number',
-                    'label' => __( 'Border Width', 'addon-so-widgets-bundle' ),
-                    'default' => '5'
+                    'type' => 'slider',
+                    'label' => __( 'Border Bottom Width', 'addon-so-widgets-bundle' ),
+                    'default' => 3,
+                    'min' => 2,
+                    'max' => 50,
+                    'integer' => true
                 ),
 
                 'divider_color' => array(

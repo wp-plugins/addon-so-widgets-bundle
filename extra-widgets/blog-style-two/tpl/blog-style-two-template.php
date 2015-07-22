@@ -31,9 +31,7 @@ $layout = wp_kses_post($instance['layout']);
                         <div class="border"></div>
                         <?php the_excerpt(); ?>
                         <div class="clearfix"></div>
-                        <div class="pull-left">
-                        <small><a href="<?php the_permalink(); ?>">Read More <span class="glyphicon glyphicon-menu-right"></span></a></small>
-                        </div>
+                        <small><a href="<?php the_permalink(); ?>">Read More </a></small>
                     </div>
                 </div>
             </div>

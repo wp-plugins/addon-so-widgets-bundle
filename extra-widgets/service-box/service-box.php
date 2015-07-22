@@ -15,7 +15,8 @@ class Service_Box extends SiteOrigin_Widget {
             __('Service Box', 'addon-so-widgets-bundle'),
             array(
                 'description' => __('Service Box.', 'addon-so-widgets-bundle'),
-                'panels_groups' => array('addonso')
+                'panels_icon' => 'dashicons dashicons-id',
+                'panels_groups' => array('addonso'),
             ),
             array(
 
@@ -70,7 +71,7 @@ class Service_Box extends SiteOrigin_Widget {
                             'label' => __( 'Set icon size', 'addon-so-widgets-bundle' ),
                             'default' => 3,
                             'min' => 2,
-                            'max' => 100,
+                            'max' => 500,
                             'integer' => true
                         ),
 
@@ -101,7 +102,7 @@ class Service_Box extends SiteOrigin_Widget {
                             'label' => __( 'Set Image Width', 'addon-so-widgets-bundle' ),
                             'default' => 3,
                             'min' => 2,
-                            'max' => 100,
+                            'max' => 500,
                             'integer' => true
                         ),
 
@@ -122,12 +123,20 @@ class Service_Box extends SiteOrigin_Widget {
                     'default' => ''
                 ),
 
+
                 'content' => array(
-                    'type' => 'textarea',
+                    'type' => 'tinymce',
                     'label' => __( 'Content', 'addon-so-widgets-bundle' ),
                     'default' => '',
-                    'allow_html_formatting' => true,
-                    'rows' => 10
+                    'rows' => 10,
+                    'default_editor' => 'html',
+                    'button_filters' => array(
+                        'mce_buttons' => array( $this, 'filter_mce_buttons' ),
+                        'mce_buttons_2' => array( $this, 'filter_mce_buttons_2' ),
+                        'mce_buttons_3' => array( $this, 'filter_mce_buttons_3' ),
+                        'mce_buttons_4' => array( $this, 'filter_mce_buttons_5' ),
+                        'quicktags_settings' => array( $this, 'filter_quicktags_settings' ),
+                    ),
                 ),
 
                 'btn_text' => array(
@@ -139,42 +148,50 @@ class Service_Box extends SiteOrigin_Widget {
 
                 'btn_url' => array(
                     'type' => 'text',
-                    'label' => __('Button Url', 'addon-so-widgets-bundle'),
+                    'label' => __('Link', 'addon-so-widgets-bundle'),
                     'default' => ''
                 ),
 
+
+
+
                 'styling' => array(
                     'type' => 'section',
-                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'label' => __( 'Widget styling' , 'addon-so-widgets-bundle' ),
                     'hide' => true,
                     'fields' => array(
 
                         'bg_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Background color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Background color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'icon_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Icon color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Icon color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
                         'title_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Title color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Title color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'content_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Content color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Content color', 'addon-so-widgets-bundle' ),
+                            'default' => ''
+                        ),
+                        'border_color' => array(
+                            'type' => 'color',
+                            'label' => __( 'Border color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'box_padding' => array(
                             'type' => 'slider',
-                            'label' => __( 'Service box padding', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Service box padding', 'addon-so-widgets-bundle' ),
                             'default' => 24,
                             'min' => 2,
                             'max' => 37,
@@ -182,27 +199,24 @@ class Service_Box extends SiteOrigin_Widget {
                         ),
                         'box_border' => array(
                             'type' => 'select',
-                            'label' => __( 'Border styled', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Border styled', 'addon-so-widgets-bundle' ),
                             'default' => '',
                             'options' => array(
-                                'solid' => __( 'Solid', 'widget-form-fields-text-domain' ),
-                                'dashed' => __( 'Dashed', 'widget-form-fields-text-domain' ),
-                                'dotted' => __( 'Dotted', 'widget-form-fields-text-domain' ),
+                                'solid' => __( 'Solid', 'addon-so-widgets-bundle' ),
+                                'dashed' => __( 'Dashed', 'addon-so-widgets-bundle' ),
+                                'dotted' => __( 'Dotted', 'addon-so-widgets-bundle' ),
                             )
                         ),
                         'box_border_width' => array(
                             'type' => 'slider',
-                            'label' => __( 'Border Width', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Border Width', 'addon-so-widgets-bundle' ),
                             'default' => 0,
                             'min' => 2,
                             'max' => 37,
                             'integer' => true
                         ),
-                        'border_color' => array(
-                            'type' => 'color',
-                            'label' => __( 'Border color', 'widget-form-fields-text-domain' ),
-                            'default' => ''
-                        ),
+
+
 
 
                     )
@@ -232,6 +246,8 @@ class Service_Box extends SiteOrigin_Widget {
             'box_border' => $instance['styling']['box_border'],
             'box_border_width' => $instance['styling']['box_border_width'].'px',
             'box_border_color' => $instance['styling']['border_color'],
+            'square_shape_bg_color' => $instance['styling']['square_shape_bg_color'],
+            'square_shape_padding' => $instance['styling']['square_shape_padding'].'px',
         );
     }
 
