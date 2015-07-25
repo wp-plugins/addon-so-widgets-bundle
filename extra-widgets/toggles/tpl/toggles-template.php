@@ -10,7 +10,7 @@ $widget_title =  wp_kses_post($instance['widget_title']);
 <?php } ?>
 
 
-<ul class="accordion">
+<ul class="soua-accordion">
     <?php foreach( $instance['toggle_repeater'] as $i => $toggle_repeater ) : ?>
     <li>
         <a><?php echo $toggle_repeater['toggle_title'] ?></a>

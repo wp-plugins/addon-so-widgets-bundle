@@ -13,7 +13,7 @@ $the_query = new WP_Query($query);
 <?php } ?>
 
 
-<ul class="accordion">
+<ul class="soua-accordion">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <li>
             <a> <?php the_title(); ?></a>

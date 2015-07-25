@@ -2,7 +2,7 @@
 Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box, post loop
 Requires at least: 3.9
 Tested up to: 4.2
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://ingenious-web.com/contact
@@ -48,6 +48,10 @@ Now each widget has it's styling options within it same as Siteorigin Widgets.
 We will add FAQs very soon.
 
 == Changelog ==
+
+= 2.2 =
+* Fixed CSS issues on couple of Widgets.
+* Fixed couple of small bugs.
 
 = 2.1 =
 * Removed Bootstrap dependency

@@ -13,9 +13,9 @@ $tabs_selection =  wp_kses_post($instance['tabs_selection']);
 
 <?php if($tabs_selection == 'horizontal'): ?>
 
-<div class="tab">
+<div class="soua-tab">
 
-    <ul class="tabs">
+    <ul class="soua-tabs">
         <?php foreach( $instance['repeater'] as $i => $repeater ) : ?>
         <li><a href="#"> <?php echo $repeater['tab_title']; ?></a></li>
         <?php endforeach; ?>
@@ -34,9 +34,9 @@ $tabs_selection =  wp_kses_post($instance['tabs_selection']);
 <?php elseif($tabs_selection == 'vertical'): ?>
 
 
-    <div class="tab vertical">
+    <div class="soua-tab vertical">
 
-        <ul class="tabs ">
+        <ul class="soua-tabs ">
             <?php foreach( $instance['repeater'] as $i => $repeater ) : ?>
                 <li><a href="#"> <?php echo $repeater['tab_title']; ?></a></li>
             <?php endforeach; ?>

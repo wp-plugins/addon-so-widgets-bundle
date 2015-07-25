@@ -1,4 +1,4 @@
-.tab {
+.soua-tab {
   position: relative;
   overflow: hidden;
   background: #eee;
@@ -10,7 +10,7 @@
   padding: 3px;
 }
 
-.tabs {
+.soua-tabs {
   display: table;
   position: relative;
   overflow: hidden;
@@ -22,9 +22,10 @@
     float: left;
     line-height: 38px;
     overflow: hidden;
-    padding: 0;
+    padding: 0 !important;
     position: relative;
     margin: 0 !important;
+    list-style-type: none !important;
   }
 
   a {
@@ -44,18 +45,6 @@
 .tabs_item {
   display: none;
   padding: 15px;
-
-  h4 {
-    font-weight: bold;
-    color: #87D3B7;
-    font-size: 20px;
-  }
-
-  img {
-    width: 200px;
-    float: left;
-    margin-right: 30px;
-  }
 
   &:first-child {display: block;}
 }
@@ -80,7 +69,7 @@
   padding: 3px;
 }
 
-.vertical .tabs {
+.vertical .soua-tabs {
   display: table-cell;
   vertical-align: top;
   position: relative;
@@ -94,9 +83,10 @@
     float: none;
     line-height: 38px;
     overflow: hidden;
-    padding: 0;
+    padding: 0 !important;
     position: relative;
     margin: 0 !important;
+    list-style-type: none !important;
   }
 
   a {
@@ -145,12 +135,12 @@
 @tab_content_color: #888888 ;
 
 
-.tab {background-color: @bg_color ;}
-.tab .tabs a{color: @inactive_tab_color;}
-.tab .current a{color: @active_tab_color;}
-.tab .tab_content .tabs_item{color: @tab_content_color;}
+.soua-tab {background-color: @bg_color ;}
+.soua-tab .soua-tabs a{color: @inactive_tab_color;}
+.soua-tab .current a{color: @active_tab_color;}
+.soua-tab .tab_content .tabs_item{color: @tab_content_color;}
 
 .vertical {background-color: @bg_color ;}
-.vertical .tabs a{color: @inactive_tab_color;}
+.vertical .soua-tabs a{color: @inactive_tab_color;}
 .vertical .current a{color: @active_tab_color;}
 .vertical .tab_content .tabs_item{color: @tab_content_color;}

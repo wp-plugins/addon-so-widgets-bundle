@@ -88,25 +88,25 @@ class Tabs extends SiteOrigin_Widget {
 
                         'bg_color' => array(
                             'type' => 'color',
-                            'label' => __( 'background color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Background Color', 'widget-form-fields-text-domain' ),
                             'default' => ''
                         ),
 
                         'inactive_tab_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Inactive Tab color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Inactive Tab Font Color', 'widget-form-fields-text-domain' ),
                             'default' => ''
                         ),
 
                         'active_tab_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Active Tab color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Active Tab Font Color', 'widget-form-fields-text-domain' ),
                             'default' => ''
                         ),
 
                         'tab_content_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Tab Content color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Tab Content Color', 'widget-form-fields-text-domain' ),
                             'default' => ''
                         ),
 

@@ -15,5 +15,4 @@ $margin_bottom = wp_kses_post($instance['margin_bottom']);
     </h3>
 <?php } ?>
 
-
-<hr style="border-style:<?php echo $divider ?>; border-width:0 0 <?php echo $divider_width ?>px 0; border-color:<?php echo $divider_color; ?>; margin-top: <?php echo $margin_top ?>px; margin-bottom: <?php echo $margin_bottom ?>px;">
+<hr class="so-divider" style="border-style:<?php echo $divider ?>; border-width:0 0 <?php echo $divider_width ?>px 0; border-color:<?php echo $divider_color; ?>; margin-top: <?php echo $margin_top ?>px; margin-bottom: <?php echo $margin_bottom ?>

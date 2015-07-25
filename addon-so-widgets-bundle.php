@@ -3,7 +3,7 @@
 /*
 Plugin Name: Ultimate Addons for SiteOrigin
 Description: An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is required.
-Version: 2.1
+Version: 2.2
 Author: Ingenious Solution
 Author URI: http://ingenious-web.com/
 Plugin URI: http://ingenious-web.com/ultimate-addons-for-siteorigin/
@@ -99,13 +99,13 @@ function f_scripts()
 jQuery(document).ready(function($){
 
 	(function ($) {
-		$('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
+		$('.soua-tab ul.soua-tabs').addClass('active').find('> li:eq(0)').addClass('current');
 
-		$('.tab ul.tabs li a').click(function (g) {
-			var tab = $(this).closest('.tab'),
+		$('.soua-tab ul.soua-tabs li a').click(function (g) {
+			var tab = $(this).closest('.soua-tab'),
 				index = $(this).closest('li').index();
 
-			tab.find('ul.tabs > li').removeClass('current');
+			tab.find('ul.soua-tabs > li').removeClass('current');
 			$(this).closest('li').addClass('current');
 
 			tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
@@ -122,15 +122,15 @@ jQuery(document).ready(function($){
 
 //    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 
-    $('.accordion a').click(function(j) {
+    $('.soua-accordion a').click(function(j) {
         var dropDown = $(this).closest('li').find('p');
 
-        $(this).closest('.accordion').find('p').not(dropDown).slideUp();
+        $(this).closest('.soua-accordion').find('p').not(dropDown).slideUp();
 
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         } else {
-            $(this).closest('.accordion').find('a.active').removeClass('active');
+            $(this).closest('.soua-accordion').find('a.active').removeClass('active');
             $(this).addClass('active');
         }
 
