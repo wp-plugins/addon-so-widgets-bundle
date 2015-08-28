@@ -1,7 +1,7 @@
 === Ultimate Addons for SiteOrigin ===
 Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box, post loop
 Requires at least: 3.9
-Tested up to: 4.2
+Tested up to: 4.3
 Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -33,9 +33,11 @@ Once you enable a widget, you'll be able to use it anywhere standard widgets are
 
 = Addon Widgets Customizations = 
 
-Now each widget has it's styling options within it same as Siteorigin Widgets.
+Each widget has it's styling options within it same as Siteorigin Widgets.
 
 **Special thanks to SiteOrigin for the help in developing this plugin.**
+
+**Please Rate this plugin if it's been useful for you and you liked it.**
 
 == Installation ==
 
