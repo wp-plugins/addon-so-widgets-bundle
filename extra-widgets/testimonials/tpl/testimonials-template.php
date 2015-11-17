@@ -52,6 +52,7 @@ global $post;
 </div>
 
 <?php elseif($layout_selection == 'grid'): ?>
+
     <?php  while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
         <div class="margin_zero">
@@ -83,6 +84,7 @@ global $post;
 
     <?php endwhile; ?>
 <?php endif; ?>
+
 
 
 <div class="clearfix"></div>

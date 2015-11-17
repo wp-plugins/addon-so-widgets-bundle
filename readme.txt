@@ -1,8 +1,8 @@
 === Ultimate Addons for SiteOrigin ===
-Tags: SiteOrigin page builder, responsive, widget, widgets, post grid, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box, post loop
+Tags: Siteorigin page builder, responsive, widget, widgets, post grid, post list, testimonial widget, testimonial rotator, testimonial post type, faqs, faq post type, tab, toggle, divider, spacer, service box, feature box, post loop, team
 Requires at least: 3.9
-Tested up to: 4.3
-Stable tag: 2.2.1
+Tested up to: 4.3.1
+Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://ingenious-web.com/contact
@@ -28,6 +28,7 @@ The collection is growing, but here's what we have so far.
 * Blog Posts Widget- There are currently 2 blog style widgets which you can use to display post loops to any page.
 * Divider Widget - This will help you to add different styles of divider b/w content sections.
 * Spacer Widget - Of-course some times you need a space b/w content sections, so here it is.
+* Team Widget - Display your team members easily with this widget.
 
 Once you enable a widget, you'll be able to use it anywhere standard widgets are used. You can manage your widgets by going to Plugins > SiteOrigin Widgets in your WordPress admin.
 
@@ -52,6 +53,14 @@ Each widget has it's styling options within it same as Siteorigin Widgets.
 We will add FAQs very soon.
 
 == Changelog ==
+
+= 2.3.0 =
+* Fixed bugs as reported by different users.
+* New option - Icon right in Service Box
+* New option - Image right alignment in blog list widget
+* New Option - Two column grid in blog list widget
+* New Option - some other little link possibilities to blog widgets.
+* New Widget - Team Members widget added.
 
 = 2.2.1 =
 * Changed CSS for grid columns. Old css was still conflicting with themes.
@@ -91,7 +100,3 @@ We will add FAQs very soon.
 
 = 1.0 =
 * Initial Upload of the plugin
-
-== Upgrade Notice ==
-
-This is a major update of this plugin, all widgets are re-coded to use SiteOrigin's API properly and removed dependency of Titan framework. By updating it you will loss some old working widgets and will need to re-add them to make them work. However all widgets are same as previous. Other than that updating is a smooth transition, but it's always better to have a backup first.

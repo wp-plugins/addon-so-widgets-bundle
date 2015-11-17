@@ -3,7 +3,7 @@
 /*
 Plugin Name: Ultimate Addons for SiteOrigin
 Description: An ultimate collection of addons for SiteOrigin. SiteOrigin Widgets Bundle is required.
-Version: 2.2.1
+Version: 2.3.0
 Author: Ingenious Solution
 Author URI: http://ingenious-web.com/
 Plugin URI: http://ingenious-web.com/ultimate-addons-for-siteorigin/
@@ -122,15 +122,15 @@ jQuery(document).ready(function($){
 
 //    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 
-    $('.soua-accordion a').click(function(j) {
-        var dropDown = $(this).closest('li').find('p');
+    $('.soua-main .soua-accordion-title').click(function(j) {
+        var dropDown = $(this).closest('.soua-accordion').find('.soua-accordion-content');
 
-        $(this).closest('.soua-accordion').find('p').not(dropDown).slideUp();
+        $(this).closest('.soua-accordion').find('.soua-accordion-content').not(dropDown).slideUp();
 
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         } else {
-            $(this).closest('.soua-accordion').find('a.active').removeClass('active');
+            $(this).closest('.soua-accordion').find('.soua-accordion-title .active').removeClass('active');
             $(this).addClass('active');
         }
 
@@ -162,6 +162,30 @@ function addonso($tabs) {
     return $tabs;
 }
 add_filter('siteorigin_panels_widget_dialog_tabs', 'addonso', 20);
+
+
+
+function excerpt($limit) {
+      $excerpt = explode(' ', get_the_excerpt(), $limit);
+      if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+      } else {
+        $excerpt = implode(" ",$excerpt);
+      } 
+      $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+      return $excerpt;
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 

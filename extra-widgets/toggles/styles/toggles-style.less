@@ -1,17 +1,17 @@
 
 
-.soua-accordion {
+.soua-main {
   margin: 0; padding: 0; list-style: none;
 }
-.soua-accordion li {
+.soua-main .soua-accordion {
   position: relative;
   padding: 0 !important;
   margin: 0 !important;
 }
-.soua-accordion li p {
+.soua-main .soua-accordion .soua-accordion-content {
   display: none;
 }
-.soua-accordion a {
+.soua-main .soua-accordion-title {
   width: 100%;
   display: block;
   cursor: pointer;
@@ -21,7 +21,7 @@
   text-decoration: none;
   padding: 0 20px;
 }
-.soua-accordion a:after {
+.soua-main .soua-accordion-title:after {
   width: 8px;
   height: 8px;
   border-right: 1px solid #4a6e78;
@@ -35,11 +35,11 @@
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.soua-accordion p {
+.soua-main .soua-accordion .soua-accordion-content {
   padding: 10px;
 }
 
-a.active:after {
+.soua-accordion-title.active:after {
   transform: rotate(45deg);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -54,15 +54,15 @@ a.active:after {
 @title_hover_color: #000000 ;
 @content_color: #000000 ;
 
-.soua-accordion li a{
+.soua-main .soua-accordion .soua-accordion-title{
   color: @title_color;
 }
 
-.soua-accordion li a:hover {
+.soua-main .soua-accordion .soua-accordion-title:hover {
   color: @title_hover_color;
 }
 
-.soua-accordion li p{
+.soua-main .soua-accordion .soua-accordion-content{
   color: @content_color;
 }
 

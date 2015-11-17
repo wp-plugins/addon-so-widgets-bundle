@@ -62,28 +62,27 @@ class Testimonials extends SiteOrigin_Widget {
 
                 'testimonial_styling' => array(
                     'type' => 'section',
-                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'label' => __( 'Widget styling' , 'addon-so-widgets-bundle' ),
                     'hide' => true,
                     'fields' => array(
 
                         'bg_color' => array(
                             'type' => 'color',
-                            'label' => __( 'background color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'background color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'content_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Content color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Content color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
-
-
-
-
+                       
 
                     )
                 ),
+                
+                
 
 
 
@@ -109,33 +108,6 @@ class Testimonials extends SiteOrigin_Widget {
 
 }
 
-
-add_action('wp_footer','carousel_scripts');
-
-function carousel_scripts()
-{
-
-    echo "<script>
-
-
-
-jQuery(document).ready(function($){
-
-(function ($) {
-
-    $('.testimonial_carousel').owlCarousel({
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-        navigation:false,
-        items : 1
-    });
-
-})(jQuery);
-
-});
-
-</script>";
-
-}
 
 function my_custom_post_product() {
     $labels = array(
@@ -164,6 +136,37 @@ function my_custom_post_product() {
     register_post_type( 'testimonial', $args );
 }
 add_action( 'init', 'my_custom_post_product' );
+
+
+
+
+// script
+
+add_action('wp_footer','carousel_scripts');
+
+function carousel_scripts()
+{
+
+    echo "<script>
+
+jQuery(document).ready(function($){
+
+        (function ($) {
+
+            $('.testimonial_carousel').owlCarousel({
+                autoPlay: 3000 , //Set AutoPlay to 3 seconds
+                navigation:false,
+                items : 1
+            });
+
+        })(jQuery);
+
+    });
+
+</script>";
+
+}
+
 
 
 

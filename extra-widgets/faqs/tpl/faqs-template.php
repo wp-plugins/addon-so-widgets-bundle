@@ -13,13 +13,13 @@ $the_query = new WP_Query($query);
 <?php } ?>
 
 
-<ul class="soua-accordion">
+<div class="soua-main">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <li>
-            <a> <?php the_title(); ?></a>
-            <?php the_content();?>
-        </li>
+        <div class="soua-accordion">
+            <a class="soua-accordion-title"> <?php the_title(); ?></a>
+            <div class="soua-accordion-content"><?php the_content();?></div>
+        </div>
         <?php endwhile; ?>
-</ul> <!-- / accordion -->
+</div> <!-- / accordion -->
 
 

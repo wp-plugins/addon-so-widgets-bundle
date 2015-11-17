@@ -29,16 +29,16 @@ class Service_Box extends SiteOrigin_Widget {
                 ),
                 'opt_selector' => array(
                     'type' => 'select',
-                    'label' => __( 'First choose an option', 'widget-form-fields-text-domain' ),
+                    'label' => __( 'First choose an option', 'addon-so-widgets-bundle' ),
                     'default' => 'blank',
                     'state_emitter' => array(
                         'callback' => 'select',
                         'args' => array( 'opt_selector' )
                     ),
                     'options' => array(
-                        'blank' => __( 'Select an option', 'widget-form-fields-text-domain' ),
-                        'icon' => __( 'Icon', 'widget-form-fields-text-domain' ),
-                        'icon_image' => __( 'Icon Image', 'widget-form-fields-text-domain' ),
+                        'blank' => __( 'Select an option', 'addon-so-widgets-bundle' ),
+                        'icon' => __( 'Icon', 'addon-so-widgets-bundle' ),
+                        'icon_image' => __( 'Icon Image', 'addon-so-widgets-bundle' ),
                     )
                 ),
 
@@ -49,6 +49,7 @@ class Service_Box extends SiteOrigin_Widget {
                     'options' => array(
                         'top' => __( 'Top', 'addon-so-widgets-bundle' ),
                         'left' => __( 'Left', 'addon-so-widgets-bundle' ),
+                        'right' => __( 'Right', 'addon-so-widgets-bundle' ),
                     )
                 ),
 
@@ -56,7 +57,7 @@ class Service_Box extends SiteOrigin_Widget {
                 //ICON SECTION
                 'icon_section' => array(
                     'type' => 'section',
-                    'label' => __( 'Icon' , 'widget-form-fields-text-domain' ),
+                    'label' => __( 'Icon' , 'addon-so-widgets-bundle' ),
                     'hide' => true,
                     'state_handler' => array(
                         'opt_selector[icon]' => array('show'),
@@ -88,7 +89,7 @@ class Service_Box extends SiteOrigin_Widget {
                 //ICON IMAGE SECTION
                 'icon_image_section' => array(
                     'type' => 'section',
-                    'label' => __( 'Icon Image' , 'widget-form-fields-text-domain' ),
+                    'label' => __( 'Icon Image' , 'addon-so-widgets-bundle' ),
                     'hide' => true,
                     'state_handler' => array(
                         'opt_selector[icon_image]' => array('show'),

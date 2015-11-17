@@ -10,12 +10,12 @@ $widget_title =  wp_kses_post($instance['widget_title']);
 <?php } ?>
 
 
-<ul class="soua-accordion">
+<div class="soua-main">
     <?php foreach( $instance['toggle_repeater'] as $i => $toggle_repeater ) : ?>
-    <li>
-        <a><?php echo $toggle_repeater['toggle_title'] ?></a>
-        <p> <?php echo $toggle_repeater['toggle_content'] ?></p>
-    </li>
+    <div class="soua-accordion">
+        <a class="soua-accordion-title"><?php echo $toggle_repeater['toggle_title'] ?></a>
+        <div class="soua-accordion-content"> <?php echo $toggle_repeater['toggle_content'] ?></div>
+    </div>
     <?php endforeach; ?>
-</ul> <!-- / accordion -->
+</div> <!-- / accordion -->
 

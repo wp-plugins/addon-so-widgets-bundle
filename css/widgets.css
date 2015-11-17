@@ -45,15 +45,16 @@
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
-    .container {
-        width: 85%;
-        padding: 0; }
+    /*.container {*/
+        /*width: 85%;*/
+        /*padding: 0;*/
+    /*}*/
 }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-    .container {
-        width: 80%; }
+    /*.container {*/
+        /*width: 80%; }*/
     .column,
     .columns {
         margin-left: 4%; }
@@ -121,12 +122,12 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Self Clearing Goodness */
-.container:after,
-.row:after,
-.u-cf {
-    content: "";
-    display: table;
-    clear: both; }
+/*.container:after,*/
+/*.row:after,*/
+/*.u-cf {*/
+    /*content: "";*/
+    /*display: table;*/
+    /*clear: both; }*/
 
 
 /* Media Queries

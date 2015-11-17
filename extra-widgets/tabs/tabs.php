@@ -82,31 +82,31 @@ class Tabs extends SiteOrigin_Widget {
 
                 'tabs_styling' => array(
                     'type' => 'section',
-                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'label' => __( 'Widget styling' , 'addon-so-widgets-bundle' ),
                     'hide' => true,
                     'fields' => array(
 
                         'bg_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Background Color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Background Color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'inactive_tab_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Inactive Tab Font Color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Inactive Tab Font Color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'active_tab_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Active Tab Font Color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Active Tab Font Color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'tab_content_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Tab Content Color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Tab Content Color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 

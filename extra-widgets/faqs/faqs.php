@@ -35,25 +35,25 @@ class Faqs extends SiteOrigin_Widget
 
                 'faqs_styling' => array(
                     'type' => 'section',
-                    'label' => __( 'Widget styling' , 'widget-form-fields-text-domain' ),
+                    'label' => __( 'Widget styling' , 'addon-so-widgets-bundle' ),
                     'hide' => true,
                     'fields' => array(
 
                         'title_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Title color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Title color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'title_hover_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Title Hover color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Title Hover color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
                         'content_color' => array(
                             'type' => 'color',
-                            'label' => __( 'Content color', 'widget-form-fields-text-domain' ),
+                            'label' => __( 'Content color', 'addon-so-widgets-bundle' ),
                             'default' => ''
                         ),
 
